@@ -1,5 +1,7 @@
 # Churn-cluster-prediction
 
+APP = https://churnratev2.herokuapp.com/
+
 
 #### Deploying a model with Flask, Docker and Heroku
 
