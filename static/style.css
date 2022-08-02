@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(251, 228, 242);
+    color: rgb(10, 9, 34);
+    font-size: 0.9em;
+
+}
+
+
+label {
+    width: 380px;
+    font-size: 1.2em;
+
+}
+
+input {
+    width: 200px;
+    border: PaleVioletRed;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+
+#submit {
+    background-color: PaleVioletRed;
+    width: 140px;
+    height: 100;
+    border: none;
+    margin-left: 154px;
+    font-size: 1.3em;
+    color: white;
+    border-radius: 10px;
+
+}
+
+#results {
+    margin-left: 154px;
+    font-size: 1.3em;
+    color: rgb(116, 99, 221);
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+
+    <title>Churn prediction</title>
+</head>
+
+<body>
+    <div class="container m-1">
+        <h1>Churn Predictor</h1>
+        <h3 class="mb-4">Please enter the information below:</h3>
+
+        <form ction={{url_for('prediction')}} method="post">
+            {# This hidden_tag is a CSRF security feature. #}
+            {{ form.hidden_tag() }}
+            {{ form.csrf_token }}
+
+
+            {{ form.gender.label }}
+            <p>
+                {% for subfield in form.gender %}
+                <tr>
+                    <td>{{ subfield(required="required", class='radio')}}</td>
+                    <td>{{ subfield.label }}</td><br />
+                </tr>
+                {% endfor %}
+            </p>
+            {{ form.education.label }}
+            <p>
+                {% for subfield in form.education %}
+                <tr>
+                    <td>{{ subfield(required="required", class='radio')}}</td>
+                    <td>{{ subfield.label }}</td><br />
+                </tr>
+                {% endfor %}
+            </p>
+            {{ form.income.label }}
+            <p>
+                {% for subfield in form.income %}
+                <tr>
+                    <td>{{ subfield(required="required", class='radio')}}</td>
+                    <td>{{ subfield.label }}</td><br />
+                </tr>
+                {% endfor %}
+            </p>
+            {{ form.card.label }}
+            <p>
+                {% for subfield in form.card %}
+                <tr>
+                    <td>{{ subfield(required="required", class='radio')}}</td>
+                    <td>{{ subfield.label }}</td><br />
+                </tr>
+                {% endfor %}<br>
+            </p>
+
+            <li>{{ form.products.label }}</li>
+            <p>
+                {% for subfield in form.products %}
+                <tr>
+                    <td>{{ subfield(required="required", class='radio')}}</td>
+                    <td>{{ subfield.label }}</td><br />
+                </tr>
+                {% endfor %}<br>
+            </p>
+            <li>{{ form.inactive.label }}</li>
+            <p>
+                {% for subfield in form.inactive %}
+                <tr>
+                    <td>{{ subfield(required="required", class='radio')}}</td>
+                    <td>{{ subfield.label }}</td><br />
+                </tr>
+                {% endfor %}<br>
+            </p>
+
+            <li>{{ form.contacts.label }}</li>
+            <p>
+                {% for subfield in form.contacts %}
+                <tr>
+                    <td>{{ subfield(required="required", class='radio')}}</td>
+                    <td>{{ subfield.label }}</td><br />
+                </tr>
+                {% endfor %}<br />
+            </p>
+
+            <li>{{ form.credit.label }} {{form.credit}}</li>
+            <url>
+                {% for error in form.credit.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </url>
+
+            <li>{{ form.revolving.label }} {{form.revolving}}</li>
+            <url>
+                {% for error in form.revolving.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </url>
+
+            <li>{{ form.transactions.label }} {{form.transactions}}</li>
+            <url>
+                {% for error in form.transactions.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+
+            </url>
+            <li>{{ form.ratio.label }} {{form.ratio}}</li>
+            <url>
+                {% for error in form.ratio.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+
+            </url>
+            <p><br />
+                <br />
+
+                {{ form.submit() }}<br />
+            </p>
+            <br />
+            <br />
+        </form>
+    </div>
+</body>
+
+</html>

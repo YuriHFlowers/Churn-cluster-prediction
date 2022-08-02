@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+
+
+    <title>Churn prediction</title>
+</head>
+
+<body>
+    <div class="container m-1">
+        <h2>Thank You. Here is the information you gave:</h2>
+        <ul>
+            <li>Gender: <em>{{session['gender']}}</em></li>
+            <li>Education level: <em>{{session['education']}}</em></li>
+            <li>Income: <em>{{session['income']}}</em></li>
+            <li>Bank card type: <em>{{session['card']}}</em></li>
+            <li>Number of products: <em>{{session['products']}}</em></li>
+            <li>Months inactive in the last year: <em>{{session['inactive']}}</em></li>
+            <li>Number of contacts in the last year: <em>{{session['contacts']}}</em></li>
+            <li>Credit limit: <em>{{session['credit']}}</em></li>
+            <li>Total revolving balance: <em>{{session['revolving']}}</em></li>
+            <li>Total transactions in the last year: <em>{{session['transactions']}}</em></li>
+            <li>Average card utilization ratio: <em>{{session['ratio']}}</em></li>
+
+        </ul>
+        <br />
+        <h3>The prediction is: {{results}}</h3>
+
+        <center>
+            <h3>
+                <results>{{op1}}</results><br />
+                <strong>
+                    <FONT COLOR='#0404E2' <results>{{op2}}</results>
+
+                    </FONT>
+                </strong>
+            </h3>
+
+
+            <img src="static/{{url_1}}" height="200" width="280" onerror="this.style.display='none'" />
+        </center>
+        <br />
+        <br />
+        <em>Estimation method: K-Medoids algorithm.</em><br>
+        <br />
+
+    </div>
+
+</body>
+
+</html>
