@@ -29,33 +29,37 @@ To run this code, you'll need the following:
     flask  
 
     └── web_application     
-   
         └── K_Medoids.joblib : the machine learning model  
-        
-        └── app.py : the file that defines our flask API  
-      
+        └── app.py : the file that defines our flask API   
         └── Procfile : required by Heroku to help start flask app  
-      
         └── requirements.txt : file containing required packages  
-    
         └── templates : this subdirectory contains HTML templates to help us build the web application  
-    
-        └── templates : this subdirectory contains HTML templates to help us build the web application  
-    
+        └── templates : this subdirectory contains HTML templates to help us build the web application   
             └── home.html : html template to be used in web application  
-        
             └── prediction.html : html template to be used in web application   
-        
         └── static : this subdirectory contains CSS style sheets    
-    
             └── style.css : css style to be used in web application    
-        
             └── images.png : images to be used in web application     
           
             
- ### Index page 
- 
-        
+ ### Index page   
+   
+   
+ ![Index page](./images/01.png)
   
+ ![Index page](./images/02.png)
+ 
+ ![Index page](./images/04.png)
+ 
+ ### Prediction   
+ 
 
+  ![Index page](./images/05.png)  
+    
+ ### Future Improvements 
+  Add the code for the API
+ 
+ 
+ 
+ 
 
