@@ -3,35 +3,35 @@
 APP = https://churnratepred.herokuapp.com/
 
 
-#### Deploying a model with Flask, Docker and Heroku
+#### Objective
 
-    -Implementation of the K-Medoids algorithm to predict segmentation groups.  
+Used a clustering algorithm to segment bank clients into groups and analyze their churn rate.   
+Deploy an app using Docker and Heroku.
 
-    -Deployment: making the machine learning model available in a production environment, where it can be accessed and utilised by other tools, workflows and software.   
+#### Solution
+
+    - Implementation of the K-Medoids algorithm to predict segmentation groups.  
+    - Deployment: making the machine learning model available in a production environment, 
+    where it can be accessed and utilised by other tools, workflows and software.   
 
 Requirements:  
 
 To run this code, you'll need the following:  
-  
-  
-    Heroku account.   
-    
-    Heroku CLI.   
-    
-    Docker desktop. 
-    
-    Virtual environment.  
-    
-    requirements.txt  
+
+`Heroku account`  
+`Heroku CLI`  
+`Docker desktop`  
+`Virtual environment`   
+`requirements.txt`  
     
     
- 
+ Description of the files 
     flask  
 
     └── web_application     
-    
+   
         └── K_Medoids.joblib : the machine learning model  
-            
+        
         └── app.py : the file that defines our flask API  
       
         └── Procfile : required by Heroku to help start flask app  
@@ -53,7 +53,8 @@ To run this code, you'll need the following:
             └── images.png : images to be used in web application     
           
             
-            
+ ### Index page 
+ 
         
   
 
